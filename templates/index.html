@@ -1,0 +1,49 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Profit Predictor</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="banner">
+        <img src="./static/images/background.jpg" alt="Background Image">
+        <div class="slogan">
+            <h2>Making way for the Futurists!</h2>
+            <p>Get the future of your startup</p>
+        </div>
+    </div>
+    <header>
+        <h1>Startup Profit Predictor</h1>
+    </header>
+    <main>
+        <div class="form-background">
+            <form id="input-form">
+                <label for="R&D-Spend">R&D Spend ($)</label>
+                <input type="number" id="R&D-Spend" required>
+                <label for="Administration">Administration ($)</label>
+                <input type="number" id="Administration" required>
+                <label for="Marketing-Spend">Marketing Spend ($)</label>
+                <input type="number" id="Marketing-Spend" required>
+                <label for="state">State:</label>
+                <select id="state" required>
+                    <option value="" selected disabled hidden></option>
+                    <option value="California">California</option>
+                    <option value="Florida">Florida</option>
+                    <option value="New York">New York</option>
+                </select>
+                <div style="text-align: center;">
+                    <button id="predict-btn">Predict Profit</button>
+                    </div>                    
+            </form>
+            <div id="prediction-output">
+                <h2>Predicted Profit:</h2>
+                <p id="predicted-profit"></p>
+            </div>
+        </div>
+    </main>
+    <script src="./static/js/script.js"></script>
+</body>
+</html>
